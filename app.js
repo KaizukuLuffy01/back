@@ -5,7 +5,7 @@ const bodyParser = require("body-parser")
 const fileUpload= require("express-fileupload")
 
 
-const errorMiddleware = require('./middleWare/error')
+const errorMiddleware = require('./middleware/error.js')
 
 app.use(express.json())
 app.use(cookieParser())
@@ -26,7 +26,7 @@ app.use('/api',patient)
 
 
 
-//Middleware for error
+//middleware for error
 app.use(errorMiddleware)
 
 module.exports = app
