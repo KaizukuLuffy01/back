@@ -13,7 +13,8 @@ process.on("uncaughtException",(err)=>{
  
 
 //config
-dotenv.config({path:'../back/config/config.env'})
+dotenv.config({path:'./config.env'})
+const PORT = process.env.PORT || 0710;
 
 
 
@@ -28,8 +29,8 @@ cloudinary.config({
 
 
 
-const server = app.listen(process.env.PORT,()=>{
-    console.log(`server is running on http://localhost:${process.env.PORT}`)
+const server = app.listen(PORT,()=>{
+    console.log(`server is running on http://localhost:${PORT}}`)
 })
 
 
